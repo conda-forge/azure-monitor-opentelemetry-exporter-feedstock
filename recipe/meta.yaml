@@ -1,5 +1,5 @@
 {% set name = "azure-monitor-opentelemetry-exporter" %}
-{% set version = "1.0.0b33" %}
+{% set version = "1.0.0b38" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/azure_monitor_opentelemetry_exporter-{{ version }}.tar.gz
-  sha256: 1cbbd41b4cb44a2ade016408b23a21762583b9da913d8ae259f29356d3a6d0ae
+  sha256: cabc0313a06067612a27ca852ff782aa34e726d32e1816cd0366981a8b29b926
 
 build:
   noarch: python
