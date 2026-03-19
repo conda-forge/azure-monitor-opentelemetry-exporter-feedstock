@@ -1,5 +1,5 @@
 {% set name = "azure-monitor-opentelemetry-exporter" %}
-{% set version = "1.0.0b48" %}
+{% set version = "1.0.0b49" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/azure_monitor_opentelemetry_exporter-{{ version }}.tar.gz
-  sha256: 5773def013e508efffa55a17768409be4b2ba369724766a89775fdc0101cc4c1
+  sha256: 020b5f991bbadd88ecc27ce35c4709bce44e8c826b3be74ab0bae2b208066e44
 
 build:
   noarch: python
@@ -20,6 +20,7 @@ requirements:
     - pip
     - setuptools
   run:
+    - typing_extensions
     - azure-storage-blob
     - django
     - fastapi
@@ -30,12 +31,12 @@ requirements:
     - uvicorn
     - python >={{ python_min }}
     - azure-core <2.0.0,>=1.28.0
-    - azure-identity >=1.17,<2.dev0
+    - azure-identity ~=1.17
     - fixedint ==0.1.6
     - msrest >=0.6.10
-    - opentelemetry-api ==1.39
-    - opentelemetry-sdk ==1.39
-    - psutil <8,>=5.9
+    - opentelemetry-api ==1.40
+    - opentelemetry-sdk ==1.40
+    - psutil >=5.9,<8
 
 test:
   imports:
